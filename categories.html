@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories - BookHive</title>
+  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="premium-header">
+    <div class="top-mini-bar">
+      <span><i class="fas fa-truck"></i> Free Shipping on orders over ₹999</span>
+      <span class="divider-dot"></span>
+      <span><i class="fas fa-lock"></i> Secure Payment</span>
+      <span class="divider-dot"></span>
+      <span><i class="fas fa-undo"></i> Easy Returns</span>
+      <span class="divider-dot"></span>
+      <span><i class="fas fa-headset"></i> 24/7 Support</span>
+      <span style="margin-left:auto;"><i class="fas fa-map-marker-alt"></i> Track Order</span>
+    </div>
+    
+    <nav class="premium-navbar">
+      <div class="nav-top">
+        <div class="logo-container">
+          <div class="logo"><i class="fas fa-book-open" style="color: #fca311;"></i> BookHive</div>
+          <div class="logo-subtitle">Your World of Books</div>
+        </div>
+        
+        <div class="search-box">
+          <input type="text" placeholder="Search books, authors, genres...">
+          <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        
+        <div class="nav-actions">
+          <a href="#" class="cart">
+            <i class="fas fa-shopping-cart"></i>
+            <div style="display:flex; flex-direction:column; line-height: 1.2;">
+              <span>Cart</span>
+            </div>
+            <span class="cart-badge" id="cart-count">0</span>
+          </a>
+          <div class="divider-vertical"></div>
+          <a href="#" class="login"><i class="far fa-user"></i> Login</a>
+        </div>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="books.html">BOOKS</a></li>
+        <li><a href="categories.html" class="active">CATEGORIES <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a></li>
+        <li><a href="newarrivals.html">NEW ARRIVALS</a></li>
+        <li><a href="offers.html">OFFERS</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="premium-books-section" style="padding-top: 180px; min-height: 100vh;">
+    <!-- Top in Fiction -->
+    <section class="category-row">
+      <h2 class="category-row-title">Top in Fiction</h2>
+      <div class="swipeable-books">
+        
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #fca311; background: #fca31120;"><i class="fas fa-star"></i> Bestseller</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/1.jpg" alt="Harry Potter">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Harry Potter</h3>
+            <p class="premium-author">J.K. Rowling</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹499</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #2ed573; background: #2ed57320;"><i class="fas fa-fire"></i> Popular</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/2.jpg" alt="The Hobbit">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">The Hobbit</h3>
+            <p class="premium-author">J.R.R Tolkien</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹650</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-sparkles"></i> New Arrival</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/3.jpg" alt="Percy Jackson">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Percy Jackson</h3>
+            <p class="premium-author">Rick Riordan</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹450</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #ff4757; background: #ff475720;"><i class="fas fa-chart-line"></i> Trending</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/5.jpg" alt="Life of Pi">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Life of Pi</h3>
+            <p class="premium-author">Yann Martel</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹520</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #fca311; background: #fca31120;"><i class="fas fa-star"></i> Bestseller</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/6.jpg" alt="Treasure Island">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Treasure Island</h3>
+            <p class="premium-author">R.L. Stevenson</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹350</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="rating-num">5.0</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #2ed573; background: #2ed57320;"><i class="fas fa-fire"></i> Popular</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/31.jpg" alt="One Indian Girl">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">One Indian Girl</h3>
+            <p class="premium-author">Chetan Bhagat</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹320</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-sparkles"></i> New Arrival</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/32.jpg" alt="Half Girlfriend">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Half Girlfriend</h3>
+            <p class="premium-author">Chetan Bhagat</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹310</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Top in Self Help & Business -->
+    <section class="category-row">
+      <h2 class="category-row-title">Top in Self Help & Business</h2>
+      <div class="swipeable-books">
+        
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #ff4757; background: #ff475720;"><i class="fas fa-chart-line"></i> Trending</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/7.jpg" alt="Atomic Habits">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Atomic Habits</h3>
+            <p class="premium-author">James Clear</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹599</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #fca311; background: #fca31120;"><i class="fas fa-star"></i> Bestseller</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/8.jpg" alt="Deep Work">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Deep Work</h3>
+            <p class="premium-author">Cal Newport</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹620</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #2ed573; background: #2ed57320;"><i class="fas fa-fire"></i> Popular</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/9.jpg" alt="The Power of Habit">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">The Power of Habit</h3>
+            <p class="premium-author">Charles Duhigg</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹560</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-sparkles"></i> New Arrival</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/10.jpg" alt="Ikigai">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Ikigai</h3>
+            <p class="premium-author">Hector Garcia</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹430</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #ff4757; background: #ff475720;"><i class="fas fa-chart-line"></i> Trending</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/11.jpg" alt="Rich Dad Poor Dad">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Rich Dad Poor Dad</h3>
+            <p class="premium-author">Robert Kiyosaki</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹450</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #fca311; background: #fca31120;"><i class="fas fa-star"></i> Bestseller</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/12.jpg" alt="The Psychology of Money">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">The Psychology of Money</h3>
+            <p class="premium-author">Morgan Housel</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹580</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #2ed573; background: #2ed57320;"><i class="fas fa-fire"></i> Popular</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/38.jpg" alt="Start With Why">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Start With Why</h3>
+            <p class="premium-author">Simon Sinek</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹520</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-sparkles"></i> New Arrival</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/39.jpg" alt="Zero to One">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Zero to One</h3>
+            <p class="premium-author">Peter Thiel</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹480</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #ff4757; background: #ff475720;"><i class="fas fa-chart-line"></i> Trending</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/40.jpg" alt="The Lean Startup">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">The Lean Startup</h3>
+            <p class="premium-author">Eric Ries</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹610</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Top in Mystery -->
+    <section class="category-row">
+      <h2 class="category-row-title">Top in Mystery</h2>
+      <div class="swipeable-books">
+        
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #fca311; background: #fca31120;"><i class="fas fa-star"></i> Bestseller</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/14.jpg" alt="Sherlock Holmes">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Sherlock Holmes</h3>
+            <p class="premium-author">Arthur Conan Doyle</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹499</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #2ed573; background: #2ed57320;"><i class="fas fa-fire"></i> Popular</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/15.jpg" alt="The Silent Patient">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">The Silent Patient</h3>
+            <p class="premium-author">Alex Michaelides</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹480</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Top in Thriller -->
+    <section class="category-row">
+      <h2 class="category-row-title">Top in Thriller</h2>
+      <div class="swipeable-books">
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-sparkles"></i> New Arrival</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/16.jpg" alt="Gone Girl">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Gone Girl</h3>
+            <p class="premium-author">Gillian Flynn</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹540</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #ff4757; background: #ff475720;"><i class="fas fa-chart-line"></i> Trending</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/17.jpg" alt="The Da Vinci Code">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">The Da Vinci Code</h3>
+            <p class="premium-author">Dan Brown</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹540</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #fca311; background: #fca31120;"><i class="fas fa-star"></i> Bestseller</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/18.jpg" alt="Inferno">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Inferno</h3>
+            <p class="premium-author">Dan Brown</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹500</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="rating-num">5.0</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top in Romance -->
+    <section class="category-row">
+      <h2 class="category-row-title">Top in Romance</h2>
+      <div class="swipeable-books">
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #2ed573; background: #2ed57320;"><i class="fas fa-fire"></i> Popular</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/19.jpg" alt="Verity">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Verity</h3>
+            <p class="premium-author">Colleen Hoover</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹460</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-sparkles"></i> New Arrival</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/20.jpg" alt="It Ends With Us">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">It Ends With Us</h3>
+            <p class="premium-author">Colleen Hoover</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹550</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #ff4757; background: #ff475720;"><i class="fas fa-chart-line"></i> Trending</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/21.jpg" alt="Pride and Prejudice">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Pride and Prejudice</h3>
+            <p class="premium-author">Jane Austen</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹440</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #fca311; background: #fca31120;"><i class="fas fa-star"></i> Bestseller</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/22.jpg" alt="Me Before You">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Me Before You</h3>
+            <p class="premium-author">Jojo Moyes</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹510</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top in Science Fiction -->
+    <section class="category-row">
+      <h2 class="category-row-title">Top in Science Fiction</h2>
+      <div class="swipeable-books">
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #2ed573; background: #2ed57320;"><i class="fas fa-fire"></i> Popular</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/23.jpg" alt="1984">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">1984</h3>
+            <p class="premium-author">George Orwell</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹470</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-sparkles"></i> New Arrival</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/24.jpg" alt="Dune">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Dune</h3>
+            <p class="premium-author">Frank Herbert</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹780</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #ff4757; background: #ff475720;"><i class="fas fa-chart-line"></i> Trending</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/25.jpg" alt="The Martian">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">The Martian</h3>
+            <p class="premium-author">Andy Weir</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹690</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top in History -->
+    <section class="category-row">
+      <h2 class="category-row-title">Top in History</h2>
+      <div class="swipeable-books">
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #fca311; background: #fca31120;"><i class="fas fa-star"></i> Bestseller</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/26.jpg" alt="Sapiens">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Sapiens</h3>
+            <p class="premium-author">Yuval Noah Harari</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹699</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #2ed573; background: #2ed57320;"><i class="fas fa-fire"></i> Popular</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/27.jpg" alt="Homo Deus">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Homo Deus</h3>
+            <p class="premium-author">Yuval Noah Harari</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹720</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top in Biography -->
+    <section class="category-row">
+      <h2 class="category-row-title">Top in Biography</h2>
+      <div class="swipeable-books">
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-sparkles"></i> New Arrival</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/28.jpg" alt="Wings of Fire">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Wings of Fire</h3>
+            <p class="premium-author">A.P.J Abdul Kalam</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹300</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #ff4757; background: #ff475720;"><i class="fas fa-chart-line"></i> Trending</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/29.jpg" alt="Steve Jobs">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Steve Jobs</h3>
+            <p class="premium-author">Walter Isaacson</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹750</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #fca311; background: #fca31120;"><i class="fas fa-star"></i> Bestseller</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/30.jpg" alt="Elon Musk">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Elon Musk</h3>
+            <p class="premium-author">Walter Isaacson</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹799</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top in Classic -->
+    <section class="category-row">
+      <h2 class="category-row-title">Top in Classic</h2>
+      <div class="swipeable-books">
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #2ed573; background: #2ed57320;"><i class="fas fa-fire"></i> Popular</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/33.jpg" alt="To Kill a Mockingbird">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">To Kill a Mockingbird</h3>
+            <p class="premium-author">Harper Lee</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹510</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-sparkles"></i> New Arrival</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/34.jpg" alt="The Great Gatsby">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">The Great Gatsby</h3>
+            <p class="premium-author">F. Scott Fitzgerald</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹390</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #ff4757; background: #ff475720;"><i class="fas fa-chart-line"></i> Trending</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/35.jpg" alt="The Catcher in the Rye">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">The Catcher in the Rye</h3>
+            <p class="premium-author">J.D. Salinger</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹410</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top in Motivation -->
+    <section class="category-row">
+      <h2 class="category-row-title">Top in Motivation</h2>
+      <div class="swipeable-books">
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #fca311; background: #fca31120;"><i class="fas fa-star"></i> Bestseller</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/36.jpg" alt="Think and Grow Rich">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Think and Grow Rich</h3>
+            <p class="premium-author">Napoleon Hill</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹520</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="premium-book-card">
+          <div class="card-badge" style="color: #2ed573; background: #2ed57320;"><i class="fas fa-fire"></i> Popular</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/37.jpg" alt="Can't Hurt Me">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Can't Hurt Me</h3>
+            <p class="premium-author">David Goggins</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹640</span>
+              <span class="premium-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="addToCart()">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3><i class="fas fa-book-open" style="color: #fca311;"></i> BookHive</h3>
+        <p>Your ultimate destination for discovering the next great read. Explore thousands of books across all genres.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="#">Best Sellers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading City</p>
+        <p><i class="fas fa-phone"></i> +91 9876543210</p>
+        <p><i class="fas fa-envelope"></i> hello@bookhive.com</p>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Subscribe to get updates on new arrivals and special offers.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email">
+          <button type="button">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 BookHive. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

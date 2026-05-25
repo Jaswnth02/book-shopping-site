@@ -1,0 +1,10 @@
+[
+  {
+    "no": 1,
+    "bookName": "Harry Potter",
+    "genre": "Fantasy",
+    "author": "J.K. Rowling",
+    "price": "499",
+    "image": "books img/1.jpg"
+  }
+]

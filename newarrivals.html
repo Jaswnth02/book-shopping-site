@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Arrivals - BookHive</title>
+  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="premium-header">
+    <div class="top-mini-bar">
+      <span><i class="fas fa-truck"></i> Free Shipping on orders over ₹999</span>
+      <span class="divider-dot"></span>
+      <span><i class="fas fa-lock"></i> Secure Payment</span>
+      <span class="divider-dot"></span>
+      <span><i class="fas fa-undo"></i> Easy Returns</span>
+      <span class="divider-dot"></span>
+      <span><i class="fas fa-headset"></i> 24/7 Support</span>
+      <span style="margin-left:auto;"><i class="fas fa-map-marker-alt"></i> Track Order</span>
+    </div>
+    
+    <nav class="premium-navbar">
+      <div class="nav-top">
+        <div class="logo-container">
+          <div class="logo"><i class="fas fa-book-open" style="color: #fca311;"></i> BookHive</div>
+          <div class="logo-subtitle">Your World of Books</div>
+        </div>
+        
+        <div class="search-box">
+          <input type="text" placeholder="Search books, authors, genres...">
+          <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        
+        <div class="nav-actions">
+          <a href="#" class="cart">
+            <i class="fas fa-shopping-cart"></i>
+            <div style="display:flex; flex-direction:column; line-height: 1.2;">
+              <span>Cart</span>
+            </div>
+            <span class="cart-badge" id="cart-count">0</span>
+          </a>
+          <div class="divider-vertical"></div>
+          <a href="#" class="login"><i class="far fa-user"></i> Login</a>
+        </div>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="books.html">BOOKS</a></li>
+        <li><a href="categories.html">CATEGORIES <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a></li>
+        <li><a href="newarrivals.html" class="active">NEW ARRIVALS</a></li>
+        <li><a href="offers.html">OFFERS</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="premium-books-section" style="padding-top: 180px; min-height: 100vh;">
+    <div class="premium-books-header" style="justify-content: center; text-align: center;">
+      <div class="books-header-left" style="align-items: center;">
+        <div class="explore-badge"><i class="fas fa-bolt"></i> PRE-ORDER NOW</div>
+        <h2 class="premium-title">New & Upcoming <span>Arrivals</span> <i class="fas fa-sparkles"></i></h2>
+        <p class="premium-subtitle">Pre-order these highly anticipated releases today!</p>
+      </div>
+    </div>
+
+    <!-- The user will provide a folder with books to populate here -->
+    <div class="premium-books-grid" id="books">
+      
+      <!-- Book 1 -->
+      <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-clock"></i> Coming Soon</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/arriving soon/a1.jpg" alt="The Winds of Winter">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">The Winds of Winter</h3>
+            <p class="premium-author">George R.R. Martin</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹899</span>
+              <span class="premium-rating" style="color: #a0a5b1;"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="alert('Added to pre-order list!')" style="border-color: #9b59b6; color: #9b59b6;">
+              <i class="fas fa-bolt"></i> Pre-order Now
+            </button>
+          </div>
+        </div>
+
+      <!-- Book 2 -->
+      <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-clock"></i> Coming Soon</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/arriving soon/a2.jpg" alt="Funny Story">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Funny Story</h3>
+            <p class="premium-author">Emily Henry</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹450</span>
+              <span class="premium-rating" style="color: #a0a5b1;"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="alert('Added to pre-order list!')" style="border-color: #9b59b6; color: #9b59b6;">
+              <i class="fas fa-bolt"></i> Pre-order Now
+            </button>
+          </div>
+        </div>
+
+      <!-- Book 3 -->
+      <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-clock"></i> Coming Soon</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/arriving soon/a3.jpg" alt="Hidden Potential">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Hidden Potential</h3>
+            <p class="premium-author">Adam Grant</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹550</span>
+              <span class="premium-rating" style="color: #a0a5b1;"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="alert('Added to pre-order list!')" style="border-color: #9b59b6; color: #9b59b6;">
+              <i class="fas fa-bolt"></i> Pre-order Now
+            </button>
+          </div>
+        </div>
+
+      <!-- Book 4 -->
+      <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-clock"></i> Coming Soon</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/arriving soon/a4.jpg" alt="Divine Rivals">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Divine Rivals</h3>
+            <p class="premium-author">Rebecca Ross</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹499</span>
+              <span class="premium-rating" style="color: #a0a5b1;"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="alert('Added to pre-order list!')" style="border-color: #9b59b6; color: #9b59b6;">
+              <i class="fas fa-bolt"></i> Pre-order Now
+            </button>
+          </div>
+        </div>
+
+      <!-- Book 5 -->
+      <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-clock"></i> Coming Soon</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/arriving soon/a5.jpg" alt="Powerless">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Powerless</h3>
+            <p class="premium-author">Lauren Roberts</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹520</span>
+              <span class="premium-rating" style="color: #a0a5b1;"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="alert('Added to pre-order list!')" style="border-color: #9b59b6; color: #9b59b6;">
+              <i class="fas fa-bolt"></i> Pre-order Now
+            </button>
+          </div>
+        </div>
+
+      <!-- Book 6 -->
+      <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-clock"></i> Coming Soon</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/arriving soon/a6.jpg" alt="House of Flame and Shadow">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">House of Flame and Shadow</h3>
+            <p class="premium-author">Sarah J. Maas</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹650</span>
+              <span class="premium-rating" style="color: #a0a5b1;"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="alert('Added to pre-order list!')" style="border-color: #9b59b6; color: #9b59b6;">
+              <i class="fas fa-bolt"></i> Pre-order Now
+            </button>
+          </div>
+        </div>
+
+      <!-- Book 7 -->
+      <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-clock"></i> Coming Soon</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/arriving soon/a7.jpg" alt="The Teacher">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">The Teacher</h3>
+            <p class="premium-author">Freida McFadden</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹399</span>
+              <span class="premium-rating" style="color: #a0a5b1;"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="alert('Added to pre-order list!')" style="border-color: #9b59b6; color: #9b59b6;">
+              <i class="fas fa-bolt"></i> Pre-order Now
+            </button>
+          </div>
+        </div>
+
+      <!-- Book 8 -->
+      <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-clock"></i> Coming Soon</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/arriving soon/a8.jpg" alt="Light Bringer">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Light Bringer</h3>
+            <p class="premium-author">Pierce Brown</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹599</span>
+              <span class="premium-rating" style="color: #a0a5b1;"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="alert('Added to pre-order list!')" style="border-color: #9b59b6; color: #9b59b6;">
+              <i class="fas fa-bolt"></i> Pre-order Now
+            </button>
+          </div>
+        </div>
+
+      <!-- Book 9 -->
+      <div class="premium-book-card">
+          <div class="card-badge" style="color: #9b59b6; background: #9b59b620;"><i class="fas fa-clock"></i> Coming Soon</div>
+          <button class="heart-btn"><i class="far fa-heart"></i></button>
+          
+          <div class="premium-img-container">
+            <img src="books img/arriving soon/a9.jpg" alt="Same as Ever">
+          </div>
+          
+          <div class="premium-card-content">
+            <h3 class="premium-book-title">Same as Ever</h3>
+            <p class="premium-author">Morgan Housel</p>
+            
+            <div class="premium-price-rating">
+              <span class="premium-price">₹450</span>
+              <span class="premium-rating" style="color: #a0a5b1;"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            </div>
+            
+            <button class="premium-add-btn" onclick="alert('Added to pre-order list!')" style="border-color: #9b59b6; color: #9b59b6;">
+              <i class="fas fa-bolt"></i> Pre-order Now
+            </button>
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3><i class="fas fa-book-open" style="color: #fca311;"></i> BookHive</h3>
+        <p>Your ultimate destination for discovering the next great read. Explore thousands of books across all genres.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading City</p>
+        <p><i class="fas fa-phone"></i> +91 9876543210</p>
+        <p><i class="fas fa-envelope"></i> hello@bookhive.com</p>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Subscribe to get updates on new arrivals and special offers.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email">
+          <button type="button">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 BookHive. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
