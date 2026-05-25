@@ -1298,8 +1298,8 @@ main {
 }
 
 .basic-features ul {
-  list-style-type: square;
-  padding-left: 20px;
+  list-style-type: none;
+  padding-left: 0;
   color: #a0a5b1;
 }
 
