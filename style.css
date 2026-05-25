@@ -166,6 +166,10 @@ body {
   left: 12px;
 }
 
+.cart {
+  gap: 20px;
+}
+
 .nav-links {
   display: flex;
   list-style: none;
