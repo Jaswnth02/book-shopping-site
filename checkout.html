@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout & Order Processing - BookHive</title>
+  <link rel="stylesheet" href="style.css?v=23">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="top-header-row">
+      <div class="logo-container">
+        <a href="index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
+          <div class="logo-icon"><i class="fas fa-book-open"></i></div>
+          <div class="logo-text">
+            <div class="brand-title">BookHive</div>
+            <div class="brand-subtitle">Your World of Books</div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="header-search-box">
+        <input type="text" placeholder="Search books, authors, genres...">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+      
+      <div class="header-actions">
+        <a href="cart.html" class="cart-action">
+          <div class="cart-icon-wrapper">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" id="cart-count">0</span>
+          </div>
+          <span class="action-label">Cart</span>
+        </a>
+        <span class="action-divider">|</span>
+        <a href="#" class="login-action">
+          <i class="far fa-user"></i>
+          <span class="action-label">Login</span>
+        </a>
+      </div>
+    </div>
+    
+    <nav class="main-navbar">
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="books.html" class="nav-link">BOOKS</a></li>
+        <li><a href="categories.html" class="nav-link">CATEGORIES <i class="fas fa-chevron-down"></i></a></li>
+        <li><a href="newarrivals.html" class="nav-link">NEW ARRIVALS</a></li>
+        <li><a href="offers.html" class="nav-link">OFFERS</a></li>
+        <li><a href="about.html" class="nav-link">ABOUT US</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CHECKOUT CONTAINER -->
+  <main class="checkout-page-container">
+    
+    <!-- CHECKOUT WIZARD STEP TRACKER -->
+    <div class="checkout-steps-tracker" id="checkout-steps-tracker">
+      <div class="step-item active" id="step-nav-1">
+        <div class="step-number"><i class="fas fa-truck"></i></div>
+        <span class="step-label">1. Shipping & Billing</span>
+      </div>
+      <div class="step-line" id="line-1-2"></div>
+      <div class="step-item" id="step-nav-2">
+        <div class="step-number"><i class="fas fa-credit-card"></i></div>
+        <span class="step-label">2. Payment</span>
+      </div>
+      <div class="step-line" id="line-2-3"></div>
+      <div class="step-item" id="step-nav-3">
+        <div class="step-number"><i class="fas fa-check-circle"></i></div>
+        <span class="step-label">3. Confirmation</span>
+      </div>
+    </div>
+
+    <div class="checkout-layout-grid" id="checkout-layout-grid">
+      
+      <!-- LEFT COLUMN: DYNAMIC FORM / STEP CONTENT -->
+      <div class="checkout-forms-column">
+        
+        <!-- STEP 1: BILLING & SHIPPING DETAILS -->
+        <section class="checkout-step-panel active" id="step-panel-shipping">
+          <div class="panel-header">
+            <h2><i class="fas fa-map-marker-alt"></i> Shipping & Billing Details</h2>
+            <p>Please enter your delivery address and contact information.</p>
+          </div>
+
+          <form id="billing-shipping-form" onsubmit="handleProceedToPayment(event)">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="shipping-name">Full Name <span class="required">*</span></label>
+                <div class="input-icon-wrapper">
+                  <i class="far fa-user"></i>
+                  <input type="text" id="shipping-name" placeholder="e.g. Jaswanth M" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="shipping-email">Email Address <span class="required">*</span></label>
+                <div class="input-icon-wrapper">
+                  <i class="far fa-envelope"></i>
+                  <input type="email" id="shipping-email" placeholder="jaswanthmg2006@gmail.com" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="shipping-phone">Phone Number <span class="required">*</span></label>
+                <div class="input-icon-wrapper">
+                  <i class="fas fa-phone-alt"></i>
+                  <input type="tel" id="shipping-phone" placeholder="+91 98765 43210" pattern="[0-9+\s\-]{10,15}" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="address-type">Address Type</label>
+                <div class="input-icon-wrapper">
+                  <i class="fas fa-building"></i>
+                  <select id="address-type">
+                    <option value="Home">Home (All day delivery)</option>
+                    <option value="Office">Office (Delivery 9 AM - 6 PM)</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="shipping-address">Street Address / Flat No. <span class="required">*</span></label>
+              <div class="input-icon-wrapper">
+                <i class="fas fa-home"></i>
+                <input type="text" id="shipping-address" placeholder="123 Harmony Street, Apt 4B" required>
+              </div>
+            </div>
+
+            <div class="form-row-3">
+              <div class="form-group">
+                <label for="shipping-city">City <span class="required">*</span></label>
+                <div class="input-icon-wrapper">
+                  <i class="fas fa-city"></i>
+                  <input type="text" id="shipping-city" placeholder="Bengaluru" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="shipping-state">State <span class="required">*</span></label>
+                <div class="input-icon-wrapper">
+                  <i class="fas fa-map"></i>
+                  <input type="text" id="shipping-state" placeholder="Karnataka" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="shipping-pincode">PIN / Postal Code <span class="required">*</span></label>
+                <div class="input-icon-wrapper">
+                  <i class="fas fa-mail-bulk"></i>
+                  <input type="text" id="shipping-pincode" placeholder="560001" pattern="[0-9]{6}" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="delivery-notes">Delivery Instructions (Optional)</label>
+              <textarea id="delivery-notes" rows="2" placeholder="e.g. Leave package with security guard if unavailable..."></textarea>
+            </div>
+
+            <div class="checkbox-group-wrapper">
+              <label class="custom-checkbox-container">
+                <input type="checkbox" id="same-as-billing" checked>
+                <span class="checkmark"></span>
+                Billing address is the same as shipping address
+              </label>
+            </div>
+
+            <div class="step-action-buttons">
+              <a href="cart.html" class="back-link-btn"><i class="fas fa-arrow-left"></i> Return to Cart</a>
+              <button type="submit" class="primary-step-btn">Continue to Payment <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </form>
+        </section>
+
+        <!-- STEP 2: PAYMENT INFORMATION SIMULATION -->
+        <section class="checkout-step-panel" id="step-panel-payment">
+          <div class="panel-header">
+            <h2><i class="fas fa-lock"></i> Payment Information (Simulation)</h2>
+            <p>Select your preferred payment method. Transactions are encrypted end-to-end.</p>
+          </div>
+
+          <!-- PAYMENT METHOD NAVIGATION TABS -->
+          <div class="payment-tabs-nav">
+            <button class="payment-tab-btn active" onclick="switchPaymentMethod('card')">
+              <i class="far fa-credit-card"></i> Card
+            </button>
+            <button class="payment-tab-btn" onclick="switchPaymentMethod('upi')">
+              <i class="fas fa-qrcode"></i> UPI / QR
+            </button>
+            <button class="payment-tab-btn" onclick="switchPaymentMethod('netbanking')">
+              <i class="fas fa-university"></i> Net Banking
+            </button>
+            <button class="payment-tab-btn" onclick="switchPaymentMethod('cod')">
+              <i class="fas fa-hand-holding-usd"></i> Cash on Delivery
+            </button>
+          </div>
+
+          <!-- PAYMENT TAB CONTENT PANELS -->
+          <div class="payment-method-body">
+            
+            <!-- CREDIT / DEBIT CARD PANEL -->
+            <div class="payment-panel active" id="payment-panel-card">
+              <!-- LIVE CREDIT CARD PREVIEW -->
+              <div class="virtual-credit-card">
+                <div class="card-chip"></div>
+                <div class="card-brand"><i class="fab fa-cc-mastercard"></i></div>
+                <div class="card-number-display" id="card-num-preview">•••• •••• •••• 4242</div>
+                <div class="card-holder-row">
+                  <div>
+                    <div class="card-label">CARD HOLDER</div>
+                    <div class="card-val" id="card-name-preview">JASWANTH M</div>
+                  </div>
+                  <div>
+                    <div class="card-label">EXPIRES</div>
+                    <div class="card-val" id="card-exp-preview">12/28</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Card Number</label>
+                <div class="input-icon-wrapper">
+                  <i class="far fa-credit-card"></i>
+                  <input type="text" id="card-number" placeholder="4242 4242 4242 4242" maxlength="19" oninput="formatCardNumber(this)">
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Expiry Date (MM/YY)</label>
+                  <div class="input-icon-wrapper">
+                    <i class="far fa-calendar-alt"></i>
+                    <input type="text" id="card-expiry" placeholder="12/28" maxlength="5" oninput="formatCardExpiry(this)">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>CVV / CVC</label>
+                  <div class="input-icon-wrapper">
+                    <i class="fas fa-key"></i>
+                    <input type="password" id="card-cvv" placeholder="•••" maxlength="4">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Cardholder Name</label>
+                <div class="input-icon-wrapper">
+                  <i class="far fa-user"></i>
+                  <input type="text" id="card-name" placeholder="Jaswanth M" oninput="updateCardName(this.value)">
+                </div>
+              </div>
+            </div>
+
+            <!-- UPI / QR CODE PANEL -->
+            <div class="payment-panel" id="payment-panel-upi">
+              <div class="upi-option-wrapper">
+                <div class="qr-code-box">
+                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=bookhive@upi&pn=BookHive%20Store" alt="Scan QR to Pay" class="qr-code-img">
+                  <span>Scan with GPay, PhonePe, or Paytm</span>
+                </div>
+                <div class="upi-divider"><span>OR</span></div>
+                <div class="upi-id-form">
+                  <label for="upi-id">Enter VPA / UPI ID</label>
+                  <div class="input-icon-wrapper">
+                    <i class="fas fa-at"></i>
+                    <input type="text" id="upi-id" placeholder="username@okaxis or user@ybl">
+                  </div>
+                  <small style="color: #6b7280; font-size: 12px; margin-top: 5px; display: block;">You will receive a payment request on your UPI App.</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- NET BANKING PANEL -->
+            <div class="payment-panel" id="payment-panel-netbanking">
+              <label style="font-weight: 600; margin-bottom: 12px; display: block;">Select Popular Bank:</label>
+              <div class="bank-grid">
+                <label class="bank-card">
+                  <input type="radio" name="bank" value="HDFC" checked>
+                  <span class="bank-pill"><i class="fas fa-university"></i> HDFC Bank</span>
+                </label>
+                <label class="bank-card">
+                  <input type="radio" name="bank" value="ICICI">
+                  <span class="bank-pill"><i class="fas fa-university"></i> ICICI Bank</span>
+                </label>
+                <label class="bank-card">
+                  <input type="radio" name="bank" value="SBI">
+                  <span class="bank-pill"><i class="fas fa-university"></i> State Bank of India</span>
+                </label>
+                <label class="bank-card">
+                  <input type="radio" name="bank" value="Axis">
+                  <span class="bank-pill"><i class="fas fa-university"></i> Axis Bank</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- CASH ON DELIVERY PANEL -->
+            <div class="payment-panel" id="payment-panel-cod">
+              <div class="cod-banner">
+                <i class="fas fa-truck-loading" style="font-size: 36px; color: #ff9800;"></i>
+                <div>
+                  <h4>Cash on Delivery Available</h4>
+                  <p>Pay with cash or UPI QR code to the delivery executive when your books arrive.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="step-action-buttons">
+            <button type="button" class="back-link-btn" onclick="goToStep(1)"><i class="fas fa-arrow-left"></i> Back to Shipping</button>
+            <button type="button" class="primary-step-btn place-order-final-btn" onclick="executePaymentSimulation()">
+              <i class="fas fa-shield-alt"></i> Complete Purchase & Pay <span id="payment-btn-amount">₹0</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- STEP 3: ORDER CONFIRMATION & RECEIPT -->
+        <section class="checkout-step-panel" id="step-panel-confirmation">
+          <div class="confirmation-success-card">
+            <div class="success-icon-badge">
+              <i class="fas fa-check"></i>
+            </div>
+            <h2>Order Placed Successfully!</h2>
+            <p class="success-subtext">Thank you for shopping with <strong>BookHive</strong>. Your order has been placed and is currently being processed.</p>
+            
+            <div class="order-reference-box">
+              <span>Order Reference Number:</span>
+              <strong id="confirmed-order-id">#BH-000000</strong>
+            </div>
+
+            <!-- ITEMIZED PURCHASE RECEIPT -->
+            <div class="order-receipt-wrapper" id="order-receipt-content">
+              <!-- Dynamically populated by script.js -->
+            </div>
+
+            <div class="confirmation-actions">
+              <button onclick="window.print()" class="print-receipt-btn"><i class="fas fa-print"></i> Print Receipt</button>
+              <a href="orders.html" class="view-orders-btn"><i class="fas fa-box"></i> View in Order History</a>
+              <a href="books.html" class="continue-shopping-btn" style="background: #f3f4f6; color: #374151;"><i class="fas fa-book"></i> Continue Shopping</a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- RIGHT COLUMN: ORDER SUMMARY SIDEBAR -->
+      <aside class="checkout-summary-column" id="checkout-summary-sidebar">
+        <div class="summary-card">
+          <h3>Order Summary</h3>
+
+          <div class="checkout-items-list" id="checkout-items-list">
+            <!-- Dynamically populated by script.js -->
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-row">
+            <span>Items Subtotal</span>
+            <span id="checkout-subtotal">₹0</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span class="free-shipping-tag">FREE</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Estimated GST / Tax (5%)</span>
+            <span id="checkout-tax">₹0</span>
+          </div>
+
+          <div class="summary-row discount-row" id="checkout-discount-row" style="display: none;">
+            <span>Discount (Promo)</span>
+            <span id="checkout-discount" style="color: #16a34a; font-weight: 600;">-₹0</span>
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-row total-row">
+            <span>Total Payable</span>
+            <span id="checkout-grand-total">₹0</span>
+          </div>
+
+          <div class="guarantee-box">
+            <i class="fas fa-shield-alt" style="color: #16a34a; font-size: 20px;"></i>
+            <div>
+              <strong>100% Purchase Protection</strong>
+              <p>7 Days Easy Returns & Replacement</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- SIMULATED PAYMENT PROCESSING OVERLAY -->
+  <div class="payment-processing-overlay" id="payment-processing-overlay">
+    <div class="processing-modal-card">
+      <div class="spinner-ring"></div>
+      <h3>Processing Payment...</h3>
+      <p>Please wait while we communicate securely with your payment provider. Do not close or refresh this page.</p>
+      <div class="processing-steps-indicator">
+        <div class="p-step active" id="p-step-1"><i class="fas fa-lock"></i> Encrypting Details</div>
+        <div class="p-step" id="p-step-2"><i class="fas fa-university"></i> Contacting Bank</div>
+        <div class="p-step" id="p-step-3"><i class="fas fa-check"></i> Authorizing Payment</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3><i class="fas fa-book-open" style="color: #ff9800;"></i> BookHive</h3>
+        <p>Your ultimate destination for discovering the next great read. Explore thousands of books across all genres.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="books.html">Best Sellers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading City</p>
+        <p><i class="fas fa-phone"></i> +91 9876543210</p>
+        <p><i class="fas fa-envelope"></i> hello@bookhive.com</p>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Subscribe to get updates on new arrivals and special offers.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email">
+          <button type="button">Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 BookHive. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

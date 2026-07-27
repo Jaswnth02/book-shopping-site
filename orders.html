@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders & Order History - BookHive</title>
+  <link rel="stylesheet" href="style.css?v=23">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="top-header-row">
+      <div class="logo-container">
+        <a href="index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
+          <div class="logo-icon"><i class="fas fa-book-open"></i></div>
+          <div class="logo-text">
+            <div class="brand-title">BookHive</div>
+            <div class="brand-subtitle">Your World of Books</div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="header-search-box">
+        <input type="text" placeholder="Search books, authors, genres...">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+      
+      <div class="header-actions">
+        <a href="cart.html" class="cart-action">
+          <div class="cart-icon-wrapper">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" id="cart-count">0</span>
+          </div>
+          <span class="action-label">Cart</span>
+        </a>
+        <span class="action-divider">|</span>
+        <a href="#" class="login-action">
+          <i class="far fa-user"></i>
+          <span class="action-label">Login</span>
+        </a>
+      </div>
+    </div>
+    
+    <nav class="main-navbar">
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="books.html" class="nav-link">BOOKS</a></li>
+        <li><a href="categories.html" class="nav-link">CATEGORIES <i class="fas fa-chevron-down"></i></a></li>
+        <li><a href="newarrivals.html" class="nav-link">NEW ARRIVALS</a></li>
+        <li><a href="offers.html" class="nav-link">OFFERS</a></li>
+        <li><a href="about.html" class="nav-link">ABOUT US</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN ORDERS PAGE -->
+  <main class="orders-page-container">
+    <div class="orders-page-header">
+      <div class="header-title-group">
+        <h1><i class="fas fa-box" style="color: #ff9800;"></i> My <span>Orders History</span></h1>
+        <p>Track shipment status, view past receipts, and quickly reorder your favorite books.</p>
+      </div>
+      
+      <!-- ORDER FILTER TABS -->
+      <div class="orders-filter-tabs">
+        <button class="order-filter-btn active" onclick="filterOrders('all', this)">All Orders</button>
+        <button class="order-filter-btn" onclick="filterOrders('active', this)">In Transit / Active</button>
+        <button class="order-filter-btn" onclick="filterOrders('delivered', this)">Delivered</button>
+      </div>
+    </div>
+
+    <!-- ORDERS LIST CONTAINER -->
+    <div class="orders-list-wrapper" id="orders-list-container">
+      <!-- Dynamically populated by script.js -->
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3><i class="fas fa-book-open" style="color: #ff9800;"></i> BookHive</h3>
+        <p>Your ultimate destination for discovering the next great read. Explore thousands of books across all genres.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="books.html">Best Sellers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading City</p>
+        <p><i class="fas fa-phone"></i> +91 9876543210</p>
+        <p><i class="fas fa-envelope"></i> hello@bookhive.com</p>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Subscribe to get updates on new arrivals and special offers.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email">
+          <button type="button">Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 BookHive. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
