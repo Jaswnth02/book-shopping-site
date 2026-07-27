@@ -4,65 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>New Arrivals - BookHive</title>
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=5">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-  <header class="premium-header">
-    <div class="top-mini-bar">
-      <span><i class="fas fa-truck"></i> Free Shipping on orders over ₹999</span>
-      <span class="divider-dot"></span>
-      <span><i class="fas fa-lock"></i> Secure Payment</span>
-      <span class="divider-dot"></span>
-      <span><i class="fas fa-undo"></i> Easy Returns</span>
-      <span class="divider-dot"></span>
-      <span><i class="fas fa-headset"></i> 24/7 Support</span>
-      <span style="margin-left:auto;"><i class="fas fa-map-marker-alt"></i> Track Order</span>
-    </div>
-    
-    <nav class="premium-navbar">
-      <div class="nav-top">
-        <div class="logo-container">
-          <div class="logo"><i class="fas fa-book-open" style="color: #fca311;"></i> BookHive</div>
-          <div class="logo-subtitle">Your World of Books</div>
-        </div>
-        
-        <div class="search-box">
-          <input type="text" placeholder="Search books, authors, genres...">
-          <button class="search-btn"><i class="fas fa-search"></i></button>
-        </div>
-        
-        <div class="nav-actions">
-          <a href="#" class="cart">
-            <i class="fas fa-shopping-cart"></i>
-            <div style="display:flex; flex-direction:column; line-height: 1.2;">
-              <span>Cart</span>
-            </div>
-            <span class="cart-badge" id="cart-count">0</span>
-          </a>
-          <div class="divider-vertical"></div>
-          <a href="#" class="login"><i class="far fa-user"></i> Login</a>
+  <header class="site-header">
+    <div class="top-header-row">
+      <div class="logo-container">
+        <div class="logo-icon"><i class="fas fa-book-open"></i></div>
+        <div class="logo-text">
+          <div class="brand-title">BookHive</div>
+          <div class="brand-subtitle">Your World of Books</div>
         </div>
       </div>
       
+      <div class="header-search-box">
+        <input type="text" placeholder="Search books, authors, genres...">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+      
+      <div class="header-actions">
+        <a href="cart.html" class="cart-action">
+          <div class="cart-icon-wrapper">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" id="cart-count">0</span>
+          </div>
+          <span class="action-label">Cart</span>
+        </a>
+        <span class="action-divider">|</span>
+        <a href="login.html" class="login-action">
+          <i class="far fa-user"></i>
+          <span class="action-label">Login</span>
+        </a>
+      </div>
+    </div>
+    
+    <nav class="main-navbar">
       <ul class="nav-links">
-        <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
-        <li><a href="books.html">BOOKS</a></li>
-        <li><a href="categories.html">CATEGORIES <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a></li>
-        <li><a href="newarrivals.html" class="active">NEW ARRIVALS</a></li>
-        <li><a href="offers.html">OFFERS</a></li>
-        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="books.html" class="nav-link">BOOKS</a></li>
+        <li><a href="categories.html" class="nav-link">CATEGORIES <i class="fas fa-chevron-down"></i></a></li>
+        <li><a href="newarrivals.html" class="nav-link active">NEW ARRIVALS</a></li>
+        <li><a href="offers.html" class="nav-link">OFFERS</a></li>
+        <li><a href="about.html" class="nav-link">ABOUT US</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="premium-books-section" style="padding-top: 130px; min-height: 100vh;">
+  <section class="premium-books-section" style="padding-top: 30px; min-height: 100vh;">
     <div class="premium-books-header" style="justify-content: center; text-align: center;">
       <div class="books-header-left" style="align-items: center;">
-        <div class="explore-badge"><i class="fas fa-bolt"></i> PRE-ORDER NOW</div>
-        <h2 class="premium-title">New & Upcoming <span>Arrivals</span> <i class="fas fa-sparkles"></i></h2>
-        <p class="premium-subtitle">Pre-order these highly anticipated releases today!</p>
+        <h2 class="premium-title">New <span>Arrivals</span></h2>
+        <p class="premium-subtitle">Be the first to get your hands on upcoming releases.</p>
       </div>
     </div>
 
@@ -70,155 +64,182 @@
     <div class="premium-books-grid" id="books">
       
       <!-- Book 1 -->
-      <div class="card coming-soon-card">
-          <div class="coming-soon-badge">Coming Soon</div>
+      <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/arriving soon/a1.jpg" alt="The Winds of Winter">
           </div>
           <div class="card-content">
-            <h3 class="book-title">The Winds of Winter</h3>
-            <p class="author">George R.R. Martin</p>
-            <div class="price-rating">
-              <span class="price">₹899</span>
-              <span class="rating"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="The Winds of Winter">The Winds of Winter</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn pre-order-btn" onclick="alert('Added to pre-order list!')"><i class="fas fa-bolt"></i> Pre-order Now</button>
+            <div class="price-row">
+              <span class="price">₹899</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
       <!-- Book 2 -->
-      <div class="card coming-soon-card">
-          <div class="coming-soon-badge">Coming Soon</div>
+      <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/arriving soon/a2.jpg" alt="Funny Story">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Funny Story</h3>
-            <p class="author">Emily Henry</p>
-            <div class="price-rating">
-              <span class="price">₹450</span>
-              <span class="rating"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Funny Story">Funny Story</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn pre-order-btn" onclick="alert('Added to pre-order list!')"><i class="fas fa-bolt"></i> Pre-order Now</button>
+            <div class="price-row">
+              <span class="price">₹450</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
       <!-- Book 3 -->
-      <div class="card coming-soon-card">
-          <div class="coming-soon-badge">Coming Soon</div>
+      <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/arriving soon/a3.jpg" alt="Hidden Potential">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Hidden Potential</h3>
-            <p class="author">Adam Grant</p>
-            <div class="price-rating">
-              <span class="price">₹550</span>
-              <span class="rating"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Hidden Potential">Hidden Potential</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn pre-order-btn" onclick="alert('Added to pre-order list!')"><i class="fas fa-bolt"></i> Pre-order Now</button>
+            <div class="price-row">
+              <span class="price">₹550</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
       <!-- Book 4 -->
-      <div class="card coming-soon-card">
-          <div class="coming-soon-badge">Coming Soon</div>
+      <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/arriving soon/a4.jpg" alt="Divine Rivals">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Divine Rivals</h3>
-            <p class="author">Rebecca Ross</p>
-            <div class="price-rating">
-              <span class="price">₹499</span>
-              <span class="rating"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Divine Rivals">Divine Rivals</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn pre-order-btn" onclick="alert('Added to pre-order list!')"><i class="fas fa-bolt"></i> Pre-order Now</button>
+            <div class="price-row">
+              <span class="price">₹499</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
       <!-- Book 5 -->
-      <div class="card coming-soon-card">
-          <div class="coming-soon-badge">Coming Soon</div>
+      <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/arriving soon/a5.jpg" alt="Powerless">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Powerless</h3>
-            <p class="author">Lauren Roberts</p>
-            <div class="price-rating">
-              <span class="price">₹520</span>
-              <span class="rating"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Powerless">Powerless</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn pre-order-btn" onclick="alert('Added to pre-order list!')"><i class="fas fa-bolt"></i> Pre-order Now</button>
+            <div class="price-row">
+              <span class="price">₹520</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
       <!-- Book 6 -->
-      <div class="card coming-soon-card">
-          <div class="coming-soon-badge">Coming Soon</div>
+      <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/arriving soon/a6.jpg" alt="House of Flame and Shadow">
           </div>
           <div class="card-content">
-            <h3 class="book-title">House of Flame and Shadow</h3>
-            <p class="author">Sarah J. Maas</p>
-            <div class="price-rating">
-              <span class="price">₹650</span>
-              <span class="rating"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="House of Flame and Shadow">House of Flame and Shadow</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn pre-order-btn" onclick="alert('Added to pre-order list!')"><i class="fas fa-bolt"></i> Pre-order Now</button>
+            <div class="price-row">
+              <span class="price">₹650</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
       <!-- Book 7 -->
-      <div class="card coming-soon-card">
-          <div class="coming-soon-badge">Coming Soon</div>
+      <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/arriving soon/a7.jpg" alt="The Teacher">
           </div>
           <div class="card-content">
-            <h3 class="book-title">The Teacher</h3>
-            <p class="author">Freida McFadden</p>
-            <div class="price-rating">
-              <span class="price">₹399</span>
-              <span class="rating"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="The Teacher">The Teacher</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn pre-order-btn" onclick="alert('Added to pre-order list!')"><i class="fas fa-bolt"></i> Pre-order Now</button>
+            <div class="price-row">
+              <span class="price">₹399</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
       <!-- Book 8 -->
-      <div class="card coming-soon-card">
-          <div class="coming-soon-badge">Coming Soon</div>
+      <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/arriving soon/a8.jpg" alt="Light Bringer">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Light Bringer</h3>
-            <p class="author">Pierce Brown</p>
-            <div class="price-rating">
-              <span class="price">₹599</span>
-              <span class="rating"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Light Bringer">Light Bringer</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn pre-order-btn" onclick="alert('Added to pre-order list!')"><i class="fas fa-bolt"></i> Pre-order Now</button>
+            <div class="price-row">
+              <span class="price">₹599</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
       <!-- Book 9 -->
-      <div class="card coming-soon-card">
-          <div class="coming-soon-badge">Coming Soon</div>
+      <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/arriving soon/a9.jpg" alt="Same as Ever">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Same as Ever</h3>
-            <p class="author">Morgan Housel</p>
-            <div class="price-rating">
-              <span class="price">₹450</span>
-              <span class="rating"><i class="fas fa-calendar-alt"></i> <span class="rating-num" style="font-size: 11px;">Releases Soon</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Same as Ever">Same as Ever</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn pre-order-btn" onclick="alert('Added to pre-order list!')"><i class="fas fa-bolt"></i> Pre-order Now</button>
+            <div class="price-row">
+              <span class="price">₹450</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 

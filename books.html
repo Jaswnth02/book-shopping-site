@@ -4,63 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Books - BookHive</title>
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=24">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-  <header class="premium-header">
-    <div class="top-mini-bar">
-      <span><i class="fas fa-truck"></i> Free Shipping on orders over ₹999</span>
-      <span class="divider-dot"></span>
-      <span><i class="fas fa-lock"></i> Secure Payment</span>
-      <span class="divider-dot"></span>
-      <span><i class="fas fa-undo"></i> Easy Returns</span>
-      <span class="divider-dot"></span>
-      <span><i class="fas fa-headset"></i> 24/7 Support</span>
-      <span style="margin-left:auto;"><i class="fas fa-map-marker-alt"></i> Track Order</span>
-    </div>
-    
-    <nav class="premium-navbar">
-      <div class="nav-top">
-        <div class="logo-container">
-          <div class="logo"><i class="fas fa-book-open" style="color: #fca311;"></i> BookHive</div>
-          <div class="logo-subtitle">Your World of Books</div>
-        </div>
-        
-        <div class="search-box">
-          <input type="text" placeholder="Search books, authors, genres...">
-          <button class="search-btn"><i class="fas fa-search"></i></button>
-        </div>
-        
-        <div class="nav-actions">
-          <a href="#" class="cart">
-            <i class="fas fa-shopping-cart"></i>
-            <div style="display:flex; flex-direction:column; line-height: 1.2;">
-              <span>Cart</span>
-            </div>
-            <span class="cart-badge" id="cart-count">0</span>
-          </a>
-          <div class="divider-vertical"></div>
-          <a href="#" class="login"><i class="far fa-user"></i> Login</a>
+  <header class="site-header">
+    <div class="top-header-row">
+      <div class="logo-container">
+        <div class="logo-icon"><i class="fas fa-book-open"></i></div>
+        <div class="logo-text">
+          <div class="brand-title">BookHive</div>
+          <div class="brand-subtitle">Your World of Books</div>
         </div>
       </div>
       
+      <div class="header-search-box">
+        <input type="text" placeholder="Search books, authors, genres...">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+      
+      <div class="header-actions">
+        <a href="cart.html" class="cart-action">
+          <div class="cart-icon-wrapper">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" id="cart-count">0</span>
+          </div>
+          <span class="action-label">Cart</span>
+        </a>
+        <span class="action-divider">|</span>
+        <a href="login.html" class="login-action">
+          <i class="far fa-user"></i>
+          <span class="action-label">Login</span>
+        </a>
+      </div>
+    </div>
+    
+    <nav class="main-navbar">
       <ul class="nav-links">
-        <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
-        <li><a href="books.html" class="active">BOOKS</a></li>
-        <li><a href="categories.html">CATEGORIES <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a></li>
-        <li><a href="newarrivals.html">NEW ARRIVALS</a></li>
-        <li><a href="offers.html">OFFERS</a></li>
-        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="books.html" class="nav-link active">BOOKS</a></li>
+        <li><a href="categories.html" class="nav-link">CATEGORIES <i class="fas fa-chevron-down"></i></a></li>
+        <li><a href="newarrivals.html" class="nav-link">NEW ARRIVALS</a></li>
+        <li><a href="offers.html" class="nav-link">OFFERS</a></li>
+        <li><a href="about.html" class="nav-link">ABOUT US</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="premium-books-section" style="padding-top: 130px; min-height: 100vh;">
+  <section class="premium-books-section" style="padding-top: 30px; min-height: 100vh;">
     <div class="premium-books-header">
       <div class="books-header-left">
-        <div class="explore-badge"><i class="fas fa-crown"></i> OUR COLLECTION</div>
         <h2 class="premium-title">All <span>Books</span> <i class="fas fa-sparkles"></i></h2>
         <p class="premium-subtitle">Explore our complete catalog of books across all genres.</p>
       </div>
@@ -68,546 +62,698 @@
     <div class="premium-books-grid" id="books">
       <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/1.jpg" alt="Harry Potter">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Harry Potter</h3>
-            <p class="author">J.K. Rowling</p>
-            <div class="price-rating">
-              <span class="price">₹499</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">FANTASY</span>
+            <h3 class="book-title" title="Harry Potter">Harry Potter</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1845)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹499</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/2.jpg" alt="The Hobbit">
           </div>
           <div class="card-content">
-            <h3 class="book-title">The Hobbit</h3>
-            <p class="author">J.R.R Tolkien</p>
-            <div class="price-rating">
-              <span class="price">₹650</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">FANTASY</span>
+            <h3 class="book-title" title="The Hobbit">The Hobbit</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(920)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹650</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/3.jpg" alt="Percy Jackson">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Percy Jackson</h3>
-            <p class="author">Rick Riordan</p>
-            <div class="price-rating">
-              <span class="price">₹450</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">FANTASY</span>
+            <h3 class="book-title" title="Percy Jackson">Percy Jackson</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1105)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹450</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/5.jpg" alt="Life of Pi">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Life of Pi</h3>
-            <p class="author">Yann Martel</p>
-            <div class="price-rating">
-              <span class="price">₹520</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">FICTION</span>
+            <h3 class="book-title" title="Life of Pi">Life of Pi</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(845)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹520</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/6.jpg" alt="Treasure Island">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Treasure Island</h3>
-            <p class="author">R.L. Stevenson</p>
-            <div class="price-rating">
-              <span class="price">₹350</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="rating-num">5.0</span></span>
+            <span class="card-category">CLASSICS</span>
+            <h3 class="book-title" title="Treasure Island">Treasure Island</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(670)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹350</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/31.jpg" alt="One Indian Girl">
           </div>
           <div class="card-content">
-            <h3 class="book-title">One Indian Girl</h3>
-            <p class="author">Chetan Bhagat</p>
-            <div class="price-rating">
-              <span class="price">₹320</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="One Indian Girl">One Indian Girl</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹320</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/32.jpg" alt="Half Girlfriend">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Half Girlfriend</h3>
-            <p class="author">Chetan Bhagat</p>
-            <div class="price-rating">
-              <span class="price">₹310</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Half Girlfriend">Half Girlfriend</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹310</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/7.jpg" alt="Atomic Habits">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Atomic Habits</h3>
-            <p class="author">James Clear</p>
-            <div class="price-rating">
-              <span class="price">₹599</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">SELF-HELP</span>
+            <h3 class="book-title" title="Atomic Habits">Atomic Habits</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(3420)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹599</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/8.jpg" alt="Deep Work">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Deep Work</h3>
-            <p class="author">Cal Newport</p>
-            <div class="price-rating">
-              <span class="price">₹620</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">PRODUCTIVITY</span>
+            <h3 class="book-title" title="Deep Work">Deep Work</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1280)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹620</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/9.jpg" alt="The Power of Habit">
           </div>
           <div class="card-content">
-            <h3 class="book-title">The Power of Habit</h3>
-            <p class="author">Charles Duhigg</p>
-            <div class="price-rating">
-              <span class="price">₹560</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">SELF-HELP</span>
+            <h3 class="book-title" title="The Power of Habit">The Power of Habit</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1540)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹560</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/10.jpg" alt="Ikigai">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Ikigai</h3>
-            <p class="author">Hector Garcia</p>
-            <div class="price-rating">
-              <span class="price">₹430</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">SELF-HELP</span>
+            <h3 class="book-title" title="Ikigai">Ikigai</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(2150)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹430</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/11.jpg" alt="Rich Dad Poor Dad">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Rich Dad Poor Dad</h3>
-            <p class="author">Robert Kiyosaki</p>
-            <div class="price-rating">
-              <span class="price">₹450</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">FINANCE</span>
+            <h3 class="book-title" title="Rich Dad Poor Dad">Rich Dad Poor Dad</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(4890)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹450</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/12.jpg" alt="The Psychology of Money">
           </div>
           <div class="card-content">
-            <h3 class="book-title">The Psychology of Money</h3>
-            <p class="author">Morgan Housel</p>
-            <div class="price-rating">
-              <span class="price">₹580</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">FINANCE</span>
+            <h3 class="book-title" title="The Psychology of Money">The Psychology of Money</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(3120)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹580</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/38.jpg" alt="Start With Why">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Start With Why</h3>
-            <p class="author">Simon Sinek</p>
-            <div class="price-rating">
-              <span class="price">₹520</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Start With Why">Start With Why</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹520</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/39.jpg" alt="Zero to One">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Zero to One</h3>
-            <p class="author">Peter Thiel</p>
-            <div class="price-rating">
-              <span class="price">₹480</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Zero to One">Zero to One</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹480</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/40.jpg" alt="The Lean Startup">
           </div>
           <div class="card-content">
-            <h3 class="book-title">The Lean Startup</h3>
-            <p class="author">Eric Ries</p>
-            <div class="price-rating">
-              <span class="price">₹610</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="The Lean Startup">The Lean Startup</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹610</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/14.jpg" alt="Sherlock Holmes">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Sherlock Holmes</h3>
-            <p class="author">Arthur Conan Doyle</p>
-            <div class="price-rating">
-              <span class="price">₹499</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">MYSTERY</span>
+            <h3 class="book-title" title="Sherlock Holmes">Sherlock Holmes</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1430)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹499</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/15.jpg" alt="The Silent Patient">
           </div>
           <div class="card-content">
-            <h3 class="book-title">The Silent Patient</h3>
-            <p class="author">Alex Michaelides</p>
-            <div class="price-rating">
-              <span class="price">₹480</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">THRILLER</span>
+            <h3 class="book-title" title="The Silent Patient">The Silent Patient</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(2760)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹480</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/16.jpg" alt="Gone Girl">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Gone Girl</h3>
-            <p class="author">Gillian Flynn</p>
-            <div class="price-rating">
-              <span class="price">₹540</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Gone Girl">Gone Girl</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹540</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/17.jpg" alt="The Da Vinci Code">
           </div>
           <div class="card-content">
-            <h3 class="book-title">The Da Vinci Code</h3>
-            <p class="author">Dan Brown</p>
-            <div class="price-rating">
-              <span class="price">₹540</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="The Da Vinci Code">The Da Vinci Code</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹540</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/18.jpg" alt="Inferno">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Inferno</h3>
-            <p class="author">Dan Brown</p>
-            <div class="price-rating">
-              <span class="price">₹500</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="rating-num">5.0</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Inferno">Inferno</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹500</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/19.jpg" alt="Verity">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Verity</h3>
-            <p class="author">Colleen Hoover</p>
-            <div class="price-rating">
-              <span class="price">₹460</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Verity">Verity</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹460</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/20.jpg" alt="It Ends With Us">
           </div>
           <div class="card-content">
-            <h3 class="book-title">It Ends With Us</h3>
-            <p class="author">Colleen Hoover</p>
-            <div class="price-rating">
-              <span class="price">₹550</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="It Ends With Us">It Ends With Us</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹550</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/21.jpg" alt="Pride and Prejudice">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Pride and Prejudice</h3>
-            <p class="author">Jane Austen</p>
-            <div class="price-rating">
-              <span class="price">₹440</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Pride and Prejudice">Pride and Prejudice</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹440</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/22.jpg" alt="Me Before You">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Me Before You</h3>
-            <p class="author">Jojo Moyes</p>
-            <div class="price-rating">
-              <span class="price">₹510</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Me Before You">Me Before You</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹510</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/23.jpg" alt="1984">
           </div>
           <div class="card-content">
-            <h3 class="book-title">1984</h3>
-            <p class="author">George Orwell</p>
-            <div class="price-rating">
-              <span class="price">₹470</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="1984">1984</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹470</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/24.jpg" alt="Dune">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Dune</h3>
-            <p class="author">Frank Herbert</p>
-            <div class="price-rating">
-              <span class="price">₹780</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Dune">Dune</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹780</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/25.jpg" alt="The Martian">
           </div>
           <div class="card-content">
-            <h3 class="book-title">The Martian</h3>
-            <p class="author">Andy Weir</p>
-            <div class="price-rating">
-              <span class="price">₹690</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="The Martian">The Martian</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹690</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/26.jpg" alt="Sapiens">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Sapiens</h3>
-            <p class="author">Yuval Noah Harari</p>
-            <div class="price-rating">
-              <span class="price">₹699</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Sapiens">Sapiens</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹699</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/27.jpg" alt="Homo Deus">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Homo Deus</h3>
-            <p class="author">Yuval Noah Harari</p>
-            <div class="price-rating">
-              <span class="price">₹720</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Homo Deus">Homo Deus</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹720</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/28.jpg" alt="Wings of Fire">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Wings of Fire</h3>
-            <p class="author">A.P.J Abdul Kalam</p>
-            <div class="price-rating">
-              <span class="price">₹300</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Wings of Fire">Wings of Fire</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹300</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/29.jpg" alt="Steve Jobs">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Steve Jobs</h3>
-            <p class="author">Walter Isaacson</p>
-            <div class="price-rating">
-              <span class="price">₹750</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Steve Jobs">Steve Jobs</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹750</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/30.jpg" alt="Elon Musk">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Elon Musk</h3>
-            <p class="author">Walter Isaacson</p>
-            <div class="price-rating">
-              <span class="price">₹799</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Elon Musk">Elon Musk</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹799</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/33.jpg" alt="To Kill a Mockingbird">
           </div>
           <div class="card-content">
-            <h3 class="book-title">To Kill a Mockingbird</h3>
-            <p class="author">Harper Lee</p>
-            <div class="price-rating">
-              <span class="price">₹510</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="To Kill a Mockingbird">To Kill a Mockingbird</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹510</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/34.jpg" alt="The Great Gatsby">
           </div>
           <div class="card-content">
-            <h3 class="book-title">The Great Gatsby</h3>
-            <p class="author">F. Scott Fitzgerald</p>
-            <div class="price-rating">
-              <span class="price">₹390</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="The Great Gatsby">The Great Gatsby</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹390</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/35.jpg" alt="The Catcher in the Rye">
           </div>
           <div class="card-content">
-            <h3 class="book-title">The Catcher in the Rye</h3>
-            <p class="author">J.D. Salinger</p>
-            <div class="price-rating">
-              <span class="price">₹410</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="The Catcher in the Rye">The Catcher in the Rye</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹410</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
 <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/36.jpg" alt="Think and Grow Rich">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Think and Grow Rich</h3>
-            <p class="author">Napoleon Hill</p>
-            <div class="price-rating">
-              <span class="price">₹520</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Think and Grow Rich">Think and Grow Rich</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹520</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
         <div class="card">
           <div class="img-container">
+            <button class="wishlist-btn" onclick="toggleWishlist(this)" title="Add to Wishlist"><i class="far fa-heart"></i></button>
             <img src="books img/37.jpg" alt="Can't Hurt Me">
           </div>
           <div class="card-content">
-            <h3 class="book-title">Can't Hurt Me</h3>
-            <p class="author">David Goggins</p>
-            <div class="price-rating">
-              <span class="price">₹640</span>
-              <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="rating-num">4.5</span></span>
+            <span class="card-category">BOOKS</span>
+            <h3 class="book-title" title="Can't Hurt Me">Can't Hurt Me</h3>
+            <div class="rating-row">
+              <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+              <span class="review-count">(1250)</span>
             </div>
-            <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            <div class="price-row">
+              <span class="price">₹640</span>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
           </div>
         </div>
     </div>
